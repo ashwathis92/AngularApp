@@ -1,0 +1,25 @@
+<div class="container" *ngIf="Getdata">
+    <h1 class="center">Students Details</h1>
+    <table class="table table-bordered" >
+        <tbody>
+            <tr>        
+                <th scope="row">Name</th>
+                <td>{{Getdata.Name | uppercase}}</td>  
+            </tr>
+            <tr>        
+                <th scope="row">Age</th>
+                <td>{{Getdata.Age}}</td>  
+            </tr>
+            <tr>        
+                <th scope="row">Mark</th>
+                <td>{{Getdata.Mark}}</td>  
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button routerLink="/edit/{{Getdata.Id}}">Edit</button>
+                    <br><a routerLink="/">Back to list</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

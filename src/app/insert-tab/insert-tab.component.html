@@ -1,0 +1,23 @@
+<h1>Insert Details</h1>
+<div>
+    <div class="form-group row">
+        <label for="uname" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="StudData.Name" placeholder="Name" id="uname" name="uname" required #uname="ngModel"/>
+            <span *ngIf="uname.invalid" class="text-danger">*</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="upass" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+            <input type="number" [(ngModel)]="StudData.Age" placeholder="Age" [min]="18" [max]="50" id="upass"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="umark" class="col-sm-2 col-form-label">Mark</label>
+        <div class="col-sm-10">
+            <input type="number" [(ngModel)]="StudData.Mark" placeholder="Mark" id="umark"/>
+        </div>
+      </div>
+    <button (click)="addStudent()" class="btn btn-primary">Save</button>
+</div>

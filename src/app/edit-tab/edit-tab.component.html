@@ -1,0 +1,23 @@
+<h1>Edit Details</h1>
+<div>
+    <div class="form-group row">
+        <label for="uname" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <label for="uname" class="col-sm-2 col-form-label">{{StudData.Name}}</label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="upass" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+            <input type="number" [(ngModel)]="StudData.Age" placeholder="Age" [min]="18" [max]="50" id="upass"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="umark" class="col-sm-2 col-form-label">Mark</label>
+        <div class="col-sm-10">
+            <input type="number" [(ngModel)]="StudData.Mark" placeholder="Mark" id="umark"/>
+        </div>
+      </div>
+    <button (click)="updateStudent()" class="btn btn-primary">Update</button>
+    <br><a routerLink="/">Back to list</a>
+</div>
